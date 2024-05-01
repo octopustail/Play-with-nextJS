@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { NextRequest } from 'next/server'
 import jwt from 'jsonwebtoken'
 
-const PUBLIC_PATH = ['/signup', '/login'];
+const PUBLIC_PATH = ['/signup', '/login',  '/verify-email'];
 
 // This function can be marked `async` if using `await` inside
 export function middleware(request: NextRequest) {
@@ -10,6 +10,8 @@ export function middleware(request: NextRequest) {
     const isPublic = PUBLIC_PATH.includes(path);
 
     const token = request.cookies.get('token')?.value ?? '';
+
+    //todo: validate token
     
     // with valid token, redirect to profile page
     if (isPublic && token) {
@@ -31,6 +33,7 @@ export const config = {
         '/',
         '/profile',
         '/login',
-        '/signup'
+        '/signup',
+        '/verify-email'
     ]
 }

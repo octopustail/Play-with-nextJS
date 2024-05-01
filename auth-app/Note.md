@@ -93,4 +93,21 @@ backend Part:
 - CRUD with database by defined models provided by mongoose.
 
 ## User Auth
+- when login,generate a cookie
+- validate the cookie in **middleware.ts**, and add redirect logic here
+- clear cookie when logout, and redirect
+
+## mail validate
+- use some mail agent to send mail, like **mailtrap**, config it, in `helper/mailer.ts`
+- create a api to call the mail agent to sent the mail
+- update the isVerified field of user.
+
+
+# deploy on vercel
+
+
+# TODO
+- [X] reset user password;
+- [X] improve the UI
+
 

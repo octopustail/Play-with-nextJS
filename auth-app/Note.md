@@ -64,3 +64,14 @@
 # Creating Page Logic
 ## make front-end pages
 - 'use client' to create client-side component;
+
+# Create API
+in app/api/users/signUp/route.ts, write RESTFUL API method.
+
+# SignIn page
+- api/user/signin/route
+
+# issue
+## 
+
+## error Illegal arguments: string, undefined

@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 
 export default function ProfilePage() {
 
-    const [user, setUser] = useState<{ _id: string; username: string }>(null);
+    const [user, setUser] = useState<{ _id: string; username: string } | null>(null);
     const router = useRouter();
     const Logout = async () => {
         try {

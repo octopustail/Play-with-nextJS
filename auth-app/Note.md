@@ -75,3 +75,24 @@ in app/api/users/signUp/route.ts, write RESTFUL API method.
 ## 
 
 ## error Illegal arguments: string, undefined
+
+# conclusion 
+## set up the project:
+DB part: 
+- set up connection config, and implement a common connect method.
+- defined model schema with mongoose, provide it to backend logic to use.
+
+frontend Part:  
+- write UI in app/your-route/page.tsx
+- add 'use client': maybe ssr page don't need this, check document later.
+- call api by api route with axios or fetch, whatever you like.
+- switch page route by `useRouter` provided by `next/navigator`
+
+backend Part: 
+- connect to the db instance by a util method, in this case, `dbConfig`.
+- write restful API in app/api/xxx/route.ts
+- `NextRequest`, `NextResponse` provided by "next/server" is handy.
+- CRUD with database by defined models provided by mongoose.
+
+## User Auth
+

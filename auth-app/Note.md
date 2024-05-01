@@ -71,10 +71,8 @@ in app/api/users/signUp/route.ts, write RESTFUL API method.
 # SignIn page
 - api/user/signin/route
 
-# issue
-## 
-
-## error Illegal arguments: string, undefined
+# Logout function
+- to log out, can simply clear the cookie, like set it to "" or expires: new Date(0)
 
 # conclusion 
 ## set up the project:

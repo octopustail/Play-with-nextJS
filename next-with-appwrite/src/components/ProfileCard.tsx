@@ -6,7 +6,7 @@ import React, { useEffect, useState } from "react";
 import {Avatar} from "./Avatar";
 
 
-const ProfileCard= () => {
+export const ProfileCard= () => {
     const [user, setUser] = useState<Models.User<Models.Preferences> | null>(null);
 
     useEffect(() => {
@@ -64,5 +64,3 @@ const ProfileCard= () => {
         )
     );
 }
-
-export default ProfileCard;

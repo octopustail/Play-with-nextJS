@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { FormEvent, useState } from "react";
 
-export const Signup = () => {
+const Login = () => {
     const router = useRouter();
     const [formData, setFormData] = useState({
         email: "",
@@ -28,7 +28,7 @@ export const Signup = () => {
         }
     }
 
-<div className="flex items-center justify-center">
+    return <div className="flex items-center justify-center">
         <div className={`mx-auto w-full max-w-lg bg-gray-200/50 rounded-xl p-10`}>
             <div className="mb-2 flex justify-center">
                 <span className="inline-block w-full max-w-[60px]">
@@ -36,17 +36,8 @@ export const Signup = () => {
                 </span>
             </div>
             <h2 className="text-center text-2xl font-bold leading-tight text-black">
-                Sign up to create account
+                Login
             </h2>
-            <p className="mt-2 text-center text-base text-gray-600">
-                Already have an account?&nbsp;
-                <Link
-                    href="/login"
-                    className="font-medium text-primary transition-all duration-200 hover:underline"
-                >
-                    Sign In
-                </Link>
-            </p>
             {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
             <form onSubmit={login} className="mt-8">
                 <div className="space-y-5">
@@ -104,3 +95,5 @@ export const Signup = () => {
         </div>
     </div>
 }
+
+export default Login;
